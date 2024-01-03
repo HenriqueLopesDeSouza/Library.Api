@@ -1,17 +1,23 @@
-﻿using Library.Core.DTOs;
+﻿using Dapper;
+using Library.Core.DTOs;
 using Library.Core.Entities;
 using Library.Core.Repositories;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.Extensions.Configuration;
 
 namespace Library.Infrastucture.Persistence.Repositories
 {
     public class UserRepository : IUserRepository
     {
         private readonly LibraryDbContext _dbContext;
-        public UserRepository(LibraryDbContext dbContext)
+        private readonly string _connectionString;
+
+        public UserRepository(LibraryDbContext dbContext, IConfiguration configuration)
         {
             _dbContext = dbContext;
+            _connectionString = configuration.GetConnectionString("LibraryCs");
+
         }
 
         public async Task AddAsync(User user)
@@ -23,11 +29,17 @@ namespace Library.Infrastucture.Persistence.Repositories
 
         public async Task<List<UserDTO>> GetAllAsync()
         {
-            var userDTOList = await _dbContext.Users
-                .Select(s => new UserDTO(s.Id, s.FullName, s.Email))
-                .ToListAsync();
+            //Dapper
+            using (var sqlConnection = new SqlConnection(_connectionString))
+            {
+                sqlConnection.Open();
 
-            return userDTOList;
+                var script = "SELECT Id, FullName, Email FROM Users";
+
+                var userDTOList = await sqlConnection.QueryAsync<UserDTO>(script);
+
+                return userDTOList.ToList();
+            }
         }
 
 
