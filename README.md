@@ -38,9 +38,11 @@
     * A repository pattern has been implemented to ensure standardized data access throughout the application.
 
 
-This technology stack and architecture provide a scalable, maintainable, and secure solution for the Book/Library Management System, including authentication and authorization mechanisms using JWT.
+
+## This technology stack and architecture provide a scalable, maintainable, and secure solution for the Book/Library Management System, including authentication and authorization mechanisms using JWT.
+
+![create_book](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/3ff9ac7c-6b90-450c-a0c7-3686376b48ac)
 
 
 
-            ![create_book](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/3ff9ac7c-6b90-450c-a0c7-3686376b48ac)
 
