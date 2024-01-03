@@ -22,7 +22,7 @@
     * Dapper has been integrated for scenarios where raw SQL or microservices require a lightweight data access approach.
     * A repository pattern has been implemented to ensure standardized data access throughout the application.
 
-## 3 - Methods:
+## Methods:
        Book Management
             Registration of books
             Querying all books
