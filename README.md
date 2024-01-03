@@ -53,4 +53,13 @@
 ## Retrun a book 
 ![return book1](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/953cf1e0-f6d7-493c-8042-c8aa4892235b)
 
+## Get All User - Dapper 
+![getAll](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/6cca3e9e-bd06-4982-b842-8b1bdeb244b9)
+
+## Swagger
+![swagger api li](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/96141a08-4601-498d-859c-268e7efbf140)
+
+## Directory Dtructure
+![estrutura das pastas](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/65bb26aa-4816-49ca-95f6-30cf6e73c4ac)
+
 ### How to run: Download the project and run Update-Database in the Library.Api 
