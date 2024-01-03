@@ -17,9 +17,28 @@ namespace Library.Application.Queries.GetAllUser
 
         public async Task<List<UserDTO>> Handle(GetAllUserQuery request, CancellationToken cancellationToken)
         {
-            return await _userRepository.GetAllAsync();
+            var userList = await _userRepository.GetAllAsync();
+            var userDTOList = MapUserListToUserDTOList(userList);
+            return userDTOList;
         }
 
+        private List<UserDTO> MapUserListToUserDTOList(IEnumerable<User> userList)
+        {
+            var userDTOList = new List<UserDTO>();
+
+            foreach (var user in userList)
+            {
+                var userDTO = new UserDTO
+                (
+                   user.FullName,
+                   user.Email
+                );
+
+                userDTOList.Add(userDTO);
+            }
+
+            return userDTOList;
+        }
 
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using Library.Core.DTOs;
 using Library.Core.Entities;
 using Library.Core.Repositories;
 using Microsoft.Data.SqlClient;
@@ -27,7 +26,7 @@ namespace Library.Infrastucture.Persistence.Repositories
         }
 
 
-        public async Task<List<UserDTO>> GetAllAsync()
+        public async Task<List<User>> GetAllAsync()
         {
             //Dapper
             using (var sqlConnection = new SqlConnection(_connectionString))
@@ -36,7 +35,7 @@ namespace Library.Infrastucture.Persistence.Repositories
 
                 var script = "SELECT Id, FullName, Email FROM Users";
 
-                var userDTOList = await sqlConnection.QueryAsync<UserDTO>(script);
+                var userDTOList = await sqlConnection.QueryAsync<User>(script);
 
                 return userDTOList.ToList();
             }

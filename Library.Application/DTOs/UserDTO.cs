@@ -8,14 +8,12 @@ namespace Library.Core.DTOs
 {
     public class UserDTO
     {
-        public UserDTO(int id, string fullName, string email)
+        public UserDTO(string name, string email)
         {
-            Id = id;
-            this.Name = fullName;
+            Name = name;
             Email = email;
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
 
