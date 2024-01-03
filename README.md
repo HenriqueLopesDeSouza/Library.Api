@@ -53,4 +53,4 @@
 ## Retrun a book 
 ![return book1](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/953cf1e0-f6d7-493c-8042-c8aa4892235b)
 
-### How to run: Download the project and install the Entity in the Library.Api 
+### How to run: Download the project and run Update-Database in the Library.Api 
