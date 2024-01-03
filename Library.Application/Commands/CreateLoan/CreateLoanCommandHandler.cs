@@ -15,7 +15,6 @@ namespace Library.Application.Commands.CreateLoan
 
         public async Task<int> Handle(CreateLoanCommand request, CancellationToken cancellationToken)
         {
-
             var loan = new Loan(request.BookId, request.UserId);
 
             await _loanRepository.AddAsync(loan);
