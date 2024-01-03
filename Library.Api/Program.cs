@@ -1,6 +1,5 @@
 using FluentValidation.AspNetCore;
 using Library.Api.Filters;
-using Library.Application.Commands.CreateBook;
 using Library.Application.Commands.CreateUser;
 using Library.Application.Validators;
 using Library.Core.Repositories;
@@ -10,10 +9,8 @@ using Library.Infrastucture.Persistence;
 using Library.Infrastucture.Persistence.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
