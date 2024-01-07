@@ -60,6 +60,6 @@
 ![swagger api li](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/96141a08-4601-498d-859c-268e7efbf140)
 
 ## Directory Structure
-![estrutura das pastas](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/65bb26aa-4816-49ca-95f6-30cf6e73c4ac)
+![Captura de tela 2024-01-06 214207](https://github.com/HenriqueLopesDeSouza/Library.Api/assets/43977679/5fb67384-8193-448d-9cc9-ab5d73034880)
 
 ### How to run: Download the project and run Update-Database in the Library.Api 
